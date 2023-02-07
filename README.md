@@ -1,4 +1,4 @@
-# Sandbox-Music-Player-Project-P4
+# Music Player Project P4
 Lesson Notes
 
 ---
@@ -7,3 +7,4 @@ Lesson Notes
 
 - [] Demo the list making tool
 - [x] I like this item, it is checked off
+- <del> [x] This item is so old school. </del>
