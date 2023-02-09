@@ -8,6 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 Minim minim;
 AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7;
+AudioPlayer soundEffect0, soundEffect1;
 //
 void setup() {
   minim = new Minim(this);
@@ -19,6 +20,8 @@ void setup() {
   song5 = minim.loadFile("../Music/Newsroom.mp3");
   song6 = minim.loadFile("../Music/Start_Your_Engines.mp3");
   song7 = minim.loadFile("../Music/The_Simplest.mp3");
+  soundEffect0 = minim.loadFile("../Sound Effects/The_Simplest_Sting.mp3");
+  soundEffect0 = minim.loadFile("../Sound Effects/Wood_Door_Open_and_Close_Series.mp3");
   song0.loop(0);
 } //End setup
 //
