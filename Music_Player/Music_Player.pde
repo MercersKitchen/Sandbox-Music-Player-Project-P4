@@ -22,13 +22,17 @@ void setup() {
   song7 = minim.loadFile("../Music/The_Simplest.mp3");
   soundEffect0 = minim.loadFile("../Sound Effects/The_Simplest_Sting.mp3");
   soundEffect0 = minim.loadFile("../Sound Effects/Wood_Door_Open_and_Close_Series.mp3");
-  song0.loop(0);
+  //song0.loop(0);
 } //End setup
 //
 void draw() {} //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+  soundEffect0.play();
+} //End keyPressed
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+  soundEffect0.rewind();
+} //End mousePressed
 //
 //End MAIN Program
