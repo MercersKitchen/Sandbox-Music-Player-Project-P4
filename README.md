@@ -9,3 +9,4 @@ Lesson Notes
 - [x] Find sound effects, .mp3 files
 - [] Loading all music to single variables
 - [] loading all sound effects to single variables
+- [] creating keyboard short cuts to play music and quit
