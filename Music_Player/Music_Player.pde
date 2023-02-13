@@ -15,8 +15,8 @@ Boolean firstMouseclick=false;
 void setup() {
   size(300, 300);
   loadMusic();
-  song0.loop(0);
-  soundEffect0.loop(0);
+  //song0.loop(0);
+  //soundEffect0.loop(0);
 } //End setup
 //
 void draw() {
@@ -25,7 +25,7 @@ void draw() {
 //
 void keyPressed() {
   //
-  if () 
+  if ( key=='0') song0.loop(0);
   if ( key=='Q' || key=='q' ) exit();
   if ( key==CODED && key==ESC ) exit();
   //
