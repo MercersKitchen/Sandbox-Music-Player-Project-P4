@@ -14,8 +14,9 @@ Boolean firstMouseclick=false;
 //
 void setup() {
   size(300, 300);
-
-  soundEffect1.loop(0);
+  loadMusic();
+  song0.loop(0);
+  soundEffect0.loop(0);
 } //End setup
 //
 void draw() {
@@ -24,14 +25,13 @@ void draw() {
 //
 void keyPressed() {
   //
-  soundEffect1.play();
+  if () 
   if ( key=='Q' || key=='q' ) exit();
   if ( key==CODED && key==ESC ) exit();
   //
 } //End keyPressed
 //
 void mousePressed() {
-  soundEffect1.rewind();
   if ( firstMouseclick==false ) firstMouseclick = true;
 } //End mousePressed
 //
