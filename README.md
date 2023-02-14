@@ -24,6 +24,11 @@ Lesson Notes
 
 Future Ideas
 
-  
 - [] 
 - [] Array for songs and sound effects variables
+
+---
+
+# To include
+
+---
