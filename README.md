@@ -9,9 +9,9 @@ Lesson Notes
 - [x] Find sound effects, .mp3 files
 - [x] Loading all music to single variables
 - [x] loading all sound effects to single variables
-- [] concatenating strings
-  - [] pathway from sketch
-  - [] String variables from copy-and-pasted file lists in WiNDOWS Folder
+- [x] concatenating strings
+  - [x] pathway from sketch
+  - [x] String variables from copy-and-pasted file lists in WiNDOWS Folder
   - [] advanced introductory: list of music files .mp3, as populated from meta data from .mp3 files
 - [] creating keyboard short cuts to play sound effects and quit
 - [] drawing 2D buttons anywhere on the canvas
