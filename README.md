@@ -24,7 +24,7 @@ Lesson Notes
 
 Future Ideas
 
-- [] 
+- [] Night Mode Colors by button and default by time
 - [] Array for songs and sound effects variables
 
 ---
