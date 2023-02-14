@@ -7,7 +7,7 @@ Lesson Notes
 
 - [x] Find music .mp3 files
 - [x] Find sound effects, .mp3 files
-- [x] Loading all music to single variables
+- [x] Loading all music to single variables & creating a TAB to group this code (also illustrate that the local variables are garbage collected)
 - [x] loading all sound effects to single variables
 - [x] concatenating strings
   - [x] pathway from sketch

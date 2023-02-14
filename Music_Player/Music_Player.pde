@@ -15,14 +15,18 @@ Boolean activateWindow=false;
 void setup() {
   size(300, 300);
   loadMusic();
+  //
+  //Illsutrate Garbage Collection of Local Variable
+  //println("Music Pathway is", musicPathway); //local variable doesn't exit outside of void loadMusic() {}
+  //
 } //End setup
 //
 void draw() {
   if ( activateWindow == true ) background(0);
   //
   //Debugging the Effective Length of the Sound Effect to code a delay
-  println ( soundEffect0.position(), soundEffect0.length() );
-  println ("When does the sound stop? Indicates delay");
+  //println ( soundEffect0.position(), soundEffect0.length() );
+  //println ("When does the sound stop? Indicates delay");
   //
 } //End draw
 //
