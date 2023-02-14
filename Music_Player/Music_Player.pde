@@ -20,19 +20,19 @@ void setup() {
 void draw() {
   if ( activateWindow == true ) background(0);
   //
-  /* //Debugging the Effective Length of the Sound Effect to code a delay
-   println ( soundEffect0.position(), soundEffect0.length() );
-   println ("When does the sound stop? Indicates delay");
-   */
+  //Debugging the Effective Length of the Sound Effect to code a delay
+  println ( soundEffect0.position(), soundEffect0.length() );
+  println ("When does the sound stop? Indicates delay");
   //
 } //End draw
 //
 void keyPressed() {
   //
-  //Play sound effect when I press a key, including delay
-  soundEffect1.loop();
-  //soundEffect0.rewind();
-  println( "KeyPressed:", soundEffect0.length() );
+  //Play sound effect when pressing a key, including delay
+  soundEffect0.play();
+  soundEffect0.rewind();
+  delay(4000); //milliseconds read from draw() println() debugging
+  println( "KeyPrekssed:", soundEffect0.length() );
   if ( key == '1' ) song0.loop(0);
 } //End keyPressed
 //
