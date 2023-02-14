@@ -33,7 +33,12 @@ void keyPressed() {
   soundEffect0.rewind();
   delay(4000); //milliseconds read from draw() println() debugging
   println( "KeyPrekssed:", soundEffect0.length() );
+  //
+  //Key Board Short Cuts for Music, use numbers
   if ( key == '1' ) song0.loop(0);
+  //
+  //Quit Button Key Board Shortcut
+  //
 } //End keyPressed
 //
 void mousePressed() {
