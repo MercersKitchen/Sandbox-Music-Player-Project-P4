@@ -12,7 +12,7 @@ Lesson Notes
 - [x] concatenating strings
   - [x] pathway from sketch
   - [x] String variables from copy-and-pasted file lists in WiNDOWS Folder
-  - [] advanced introductory: list of music files .mp3, as populated from meta data from .mp3 files
+  - [] advanced introductory: list of music files .mp3, as populated from meta data from .mp3 files (CAUTION: this is an impossible ask, can you explain why)
 - [] creating keyboard short cuts to play sound effects and quit
 - [] drawing 2D buttons anywhere on the canvas
 - [] introduce naming groups of code through TABs
