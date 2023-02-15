@@ -1,5 +1,10 @@
 void keyPressedShortCuts() {
   //
+  musicShortCuts();
+  //
+}//End keyPressedShortCuts
+//
+void musicShortCuts() {
   //Key Board Short Cuts for Music, use numbers
   //Hint: notice human numbering vs. computer numbering9
   if ( key == '1' ) song0.loop(0); //.rewind() is included in .loop()
@@ -10,7 +15,6 @@ void keyPressedShortCuts() {
   if ( key == '6' ) song5.loop(0);
   if ( key == '7' ) song6.loop(0);
   if ( key == '8' ) song7.loop(0);
-  //
-}//End keyPressedShortCuts
+}//End musicShortCuts
 //
 //End Key Board Short Cuts Sub Program

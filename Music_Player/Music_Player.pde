@@ -10,6 +10,8 @@ Minim minim;
 AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7;
 AudioPlayer soundEffect0, soundEffect1;
 //
+int time = 7000;
+//
 Boolean activateWindow=false;
 //
 void setup() {
@@ -28,7 +30,7 @@ void draw() {
   //println ( soundEffect0.position(), soundEffect0.length() );
   //println ("When does the sound stop? Indicates delay");
   // Debugging a sound to shorten a file play
-  println( soundEffect1.position(), soundEffect1.length() );
+  //println( soundEffect1.position(), soundEffect1.length() );
   //
 } //End draw
 //
@@ -44,10 +46,11 @@ void keyPressed() {
   //
   //Quit Button Key Board Shortcut
   if ( key == 'Q' || key == 'q' ) {
-    soundEffect1.play(7000); //only need partial file, use milliseconds
-    soundEffect1.rewind();
+    soundEffect1.loop(0); //only need partial file, use .play(int millis)
+    //Visual Image or Text of Goodbye
+    delay(3000); //alternate way of playing sound once
+    exit();
   }
-
   //
 } //End keyPressed
 //
