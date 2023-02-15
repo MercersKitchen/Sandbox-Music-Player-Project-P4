@@ -5,6 +5,7 @@ Lesson Notes
 
 # To Do List
 
+- [] Case Study
 - [x] Find music .mp3 files
 - [x] Find sound effects, .mp3 files
 - [x] Loading all music to single variables & creating a TAB to group this code (also illustrate that the local variables are garbage collected)
@@ -18,7 +19,13 @@ Lesson Notes
 - [] introduce naming groups of code through TABs
   - [] Visual Data based on Display, population()
   - [] advanced: related to one point
-- [] 
+- [] review Case Study
+- [] drawing text (day and night mode inks)
+- [] drawing images (tints with day and night mode)
+- [] algorithms of music buttons
+- [] adding features to music player
+- [] display issues (CANVAS larger than display)
+- [] adding meta data with ink colour
 
 ---
 
@@ -31,4 +38,9 @@ Future Ideas
 
 # To include
 
+Celebration Card
+
+Drawing App
+
+Others
 ---
