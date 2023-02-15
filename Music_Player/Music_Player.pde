@@ -36,12 +36,21 @@ void keyPressed() {
   soundEffect0.play();
   soundEffect0.rewind();
   delay(4000); //milliseconds read from draw() println() debugging
-  println( "KeyPrekssed:", soundEffect0.length() );
+  //println( "KeyPrekssed:", soundEffect0.length() );
   //
   //Key Board Short Cuts for Music, use numbers
-  if ( key == '1' ) song0.loop(0);
+  //Hint: notice human numbering vs. computer numbering9
+  if ( key == '1' ) song0.loop(0); //.rewind() is included in .loop()
+  if ( key == '2' ) song1.loop(0);
+  if ( key == '3' ) song2.loop(0);
+  if ( key == '4' ) song3.loop(0);
+  if ( key == '5' ) song4.loop(0);
+  if ( key == '6' ) song5.loop(0);
+  if ( key == '7' ) song6.loop(0);
+  if ( key == '8' ) song7.loop(0);
   //
   //Quit Button Key Board Shortcut
+  if (key == 'Q' || key == 'q' ) soundEffect1.loop(0); //only need partial file
   //
 } //End keyPressed
 //
