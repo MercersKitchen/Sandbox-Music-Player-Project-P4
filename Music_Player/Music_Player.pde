@@ -44,14 +44,6 @@ void keyPressed() {
   //
   keyPressedShortCuts();
   //
-  //Quit Button Key Board Shortcut
-  if ( key == 'Q' || key == 'q' ) {
-    soundEffect1.loop(0); //only need partial file, use .play(int millis)
-    //Visual Image or Text of Goodbye
-    delay(3000); //alternate way of playing sound once
-    exit();
-  }
-  //
 } //End keyPressed
 //
 void mousePressed() {

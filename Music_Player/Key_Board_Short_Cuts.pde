@@ -17,4 +17,20 @@ void musicShortCuts() {
   if ( key == '8' ) song7.loop(0);
 }//End musicShortCuts
 //
+void quitButton() {
+  //Quit Button Key Board Shortcuts
+  if ( key == 'Q' || key == 'q' ) {
+    soundEffect1.loop(0); //only need partial file, use .play(int millis)
+    //Visual Image or Text of Goodbye
+    delay(3000); //alternate way of playing sound once
+    exit();
+  }
+  if ( key == CODED && keyCode == ESC ) {
+    soundEffect1.loop(0); //only need partial file, use .play(int millis)
+    //Visual Image or Text of Goodbye
+    delay(3000); //alternate way of playing sound once
+    exit();
+  }//End Quit Buttons
+}//End quitButton
+//
 //End Key Board Short Cuts Sub Program
