@@ -1,6 +1,7 @@
 void keyPressedShortCuts() {
   //
   musicShortCuts();
+  quitButtons();
   //
 }//End keyPressedShortCuts
 //
@@ -17,20 +18,21 @@ void musicShortCuts() {
   if ( key == '8' ) song7.loop(0);
 }//End musicShortCuts
 //
-void quitButton() {
+void quitButtons() {
   //Quit Button Key Board Shortcuts
   if ( key == 'Q' || key == 'q' ) {
-    soundEffect1.loop(0); //only need partial file, use .play(int millis)
-    //Visual Image or Text of Goodbye
-    delay(3000); //alternate way of playing sound once
-    exit();
+    quitButtonCode();
   }
   if ( key == CODED && keyCode == ESC ) {
-    soundEffect1.loop(0); //only need partial file, use .play(int millis)
-    //Visual Image or Text of Goodbye
-    delay(3000); //alternate way of playing sound once
-    exit();
+    quitButtonCode();
   }//End Quit Buttons
-}//End quitButton
+}//End quitButtons
+//
+void quitButtonCode() {
+  soundEffect1.loop(0); //only need partial file, use .play(int millis)
+  //Visual Image or Text of Goodbye
+  delay(3000); //alternate way of playing sound once
+  exit();
+}//End quitButtonCode
 //
 //End Key Board Short Cuts Sub Program
