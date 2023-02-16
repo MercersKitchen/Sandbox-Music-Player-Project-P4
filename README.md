@@ -39,6 +39,10 @@ Future Ideas
 - [] Night Mode Colors by button and default by time
 - [] Array for songs and sound effects variables
 
+Geometry Questions
+- Size must be in coded in landscape, portrait, or square initially
+- Able to change these in void draw
+- what happens if the CANVAS is larger than the display: shink it, etc.
 ---
 
 # To include
