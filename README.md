@@ -20,6 +20,10 @@ Example To Do List
   - [x] String variables from copy-and-pasted file lists in WiNDOWS Folder
   - [] advanced introductory: list of music files .mp3, as populated from meta data from .mp3 files (CAUTION: this is an impossible ask, can you explain why)
 - [] creating keyboard short cuts to play sound effects and quit
+- [] design of music buttons based on rect(), triangle(), and ellipse()
+  - [] naming variables in camelCase, how the computer draws the shapes
+  - [] initializing or declare
+  - [] populate based on display variables
 - [] drawing 2D buttons anywhere on the canvas
 - [] introduce naming groups of code through TABs
   - [] Visual Data based on Display, population()
