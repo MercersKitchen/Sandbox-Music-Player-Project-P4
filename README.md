@@ -21,14 +21,17 @@ Example To Do List
   - [x] advanced introductory: list of music files .mp3, as populated from meta data from .mp3 files (CAUTION: this is an impossible ask, can you explain why)
 - [x] creating keyboard short cuts to play sound effects and quit
 - [] design of music buttons based on rect(), triangle(), and ellipse()
+  - [] design buttons in order, illustrate how stop designs rest: stop, pause, play, fast forward, next, loop (shapes in fast forward and next illustrate what actually happens)
+- [] Pseudocode all buttons
+- [] drawing 2D buttons anywhere on the canvas (do activity of put a dot on the page and fold to find the ratio of dimensions)
   - [] naming variables in camelCase | variables are how the computer draws the shapes after first principals are worked out
   - [] initializing or declare
   - [] populate based on display variables (identifying the pixels being used)
-  - [] design buttons in order, illustrate how stop designs rest: stop, pause, play, fast forward, next, loop (shapes in fast forward and next illustrate what actually happens)
+  
     - fast forward only: triangles only
     - next: two triangles and a partial pause shape
   - [] extra buttons: loop once (drawing text), looping infinite, looping playlist, mute (image and X), shuffle
-- [] drawing 2D buttons anywhere on the canvas (do activity of put a dot on the page and fold to find the ratio of dimensions)
+
   - [] boilerplate, draw() / shapes grouped by comment / initialize or declare / population using display variables
 - [] introduce naming groups of code through TABs
   - [] Visual Data based on Display, population()
