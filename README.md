@@ -20,7 +20,7 @@ Example To Do List
   - [x] String variables from copy-and-pasted file lists in WiNDOWS Folder
   - [x] advanced introductory: list of music files .mp3, as populated from meta data from .mp3 files (CAUTION: this is an impossible ask, can you explain why)
 - [x] creating keyboard short cuts to play sound effects and quit
-- [] design of music buttons based on rect(), triangle(), and ellipse()
+- [x] design of music buttons based on rect(), triangle(), and ellipse()
   - [] design buttons in order, illustrate how stop designs rest: stop, pause, play, mute, skip in seconds, skip in files, & loops (shapes in fast forward and next illustrate what actually happens)
 - [] Pseudocode all buttons
 - [] drawing 2D buttons anywhere on the canvas (do activity of put a dot on the page and fold to find the ratio of dimensions)
