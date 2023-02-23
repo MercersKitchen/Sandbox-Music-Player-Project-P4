@@ -9,7 +9,15 @@ void setup() {
   //
 } //End setup
 //
-void draw() {} //End draw
+void draw() {
+  //Stop Button
+  rect( X, Y, Width, Height );
+  //
+  //Pause Button
+  rect( X, Y, Width, Height );
+  rect( X, Y, Width, Height );
+  //
+} //End draw
 //
 void keyPressed() {} //End keyPressed
 //
