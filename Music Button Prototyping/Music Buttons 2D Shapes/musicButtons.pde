@@ -5,7 +5,8 @@ void setup() {
   size(700, 500); //width, height
   fullScreen(); //displayWidth, displayHeight
   //
-  
+  //Population: visual data
+  //
 } //End setup
 //
 void draw() {} //End draw
