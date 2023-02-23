@@ -50,6 +50,8 @@ Example To Do List
 Future Ideas
 
 - [] Night Mode Colors by button and default by time
+  - Use of ternary operator
+  - CS20 is able to use daytime procedure for more individual control
 - [] Array for songs and sound effects variables
 
 Geometry Questions
