@@ -3,7 +3,7 @@
 void setup() {
   //Display
   size(700, 500); //width, height
-  fullScreen(); //displayWidth, displayHeight
+  //fullScreen(); //displayWidth, displayHeight
   //
   //Population: visual data
   //
@@ -11,12 +11,16 @@ void setup() {
 //
 void draw() {
   //
+  /*Note: draw the pause button first, in the middle
+   All other buttons are drawn around it
+   */
+  //
   //Button Space
   //rect( X, Y, Width, Height );
   //
   //Stop Button
   //rect( X, Y, Width, Height ); //Layout????
-  //rect( X, Y, Width, Height );
+  //rect( X, Y, Side, side ); //Square shape
   //
   //Pause Button
   //rect( X, Y, Width, Height ); //Layout
@@ -35,7 +39,7 @@ void draw() {
   //rect( X, Y, Width, Height ); //Layout
   //triangle( X1, Y1, X2, Y2, X3, Y3 );
   //triangle( X1, Y1, X2, Y2, X3, Y3 );
-  // 
+  //
   //Reverse in the Song
   //rect( X, Y, Width, Height ); //Layout
   //triangle( X1, Y1, X2, Y2, X3, Y3 );
@@ -74,8 +78,10 @@ void draw() {
   //
 } //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+} //End keyPressed
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+} //End mousePressed
 //
 //End MAIN Program
