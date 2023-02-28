@@ -1,4 +1,5 @@
 //Global Variables
+float buttonReferenceMeasure;
 //
 void setup() {
   //Display
@@ -6,6 +7,11 @@ void setup() {
   //fullScreen(); //displayWidth, displayHeight
   //
   //Population: visual data
+  buttonReferenceMeasure = width * 1/9;
+  buttonWidth = buttonReferenceMeasure;
+  buttonHeight = buttonReferenceMeasure;
+  spaceWidth = buttonReferenceMeasure * 1/3;
+  spaceHeight = buttonReferenceMeasure
   //
 } //End setup
 //
