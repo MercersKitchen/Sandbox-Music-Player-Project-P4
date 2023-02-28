@@ -76,6 +76,10 @@ void draw() {
   //ellipse( X, Y, WidthDiameter, HeightDiameter );
   //triangle( X1, Y1, X2, Y2, X3, Y3 );
   //
+  //OPTINAL Shuffle
+  //rect( X, Y, Width, Height ); //Layout
+  //2-D Shapes
+  //
 } //End draw
 //
 void keyPressed() {
