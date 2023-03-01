@@ -12,7 +12,6 @@ void setup() {
   buttonReferentMeasure = width * 1/9;
   buttonSide = buttonReferentMeasure;
   spaceWidth = buttonReferentMeasure * 1/3;
-  spaceHeight = buttonReferentMeasure;
   //
   float centerX = width * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
   float centerY = height * 1/2;
@@ -22,7 +21,7 @@ void setup() {
   pauseX1 = centerX - buttonReferentMeasure*1/2;
   pauseY1 = centerY - buttonReferentMeasure*1/2;
   pauseWidth = buttonReferentMeasure * 1/3;
-  pauseX2 = centerX + buttonReferentMeasure*1/2;
+  pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1; 
   //
 } //End setup
@@ -46,9 +45,9 @@ void draw() {
   //rect( stopX, stopY, buttonSide, buttonSide ); //Square shape
   //
   //Pause Button
-  //rect( pauseX1, pauseY1, buttonSide, buttonSide ); //Layout
-  //rect( pauseX1, pauseY1, pauseWidth, buttonSide );
-  //rect( pauseX2, pauseY2, pauseWidth, buttonSide );
+  rect( pauseX1, pauseY1, buttonSide, buttonSide ); //Layout
+  rect( pauseX1, pauseY1, pauseWidth, buttonSide );
+  rect( pauseX2, pauseY2, pauseWidth, buttonSide );
   //
   //Play Button
   //rect( playX, playY, buttonSide, buttonSide ); //Layout
