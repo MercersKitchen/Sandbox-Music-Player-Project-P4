@@ -1,6 +1,7 @@
 //Global Variables
 float buttonReferentMeasure;
 float buttonSide, spaceWidth, spaceHeight;
+float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth;
 //
 void setup() {
   //Display
@@ -18,8 +19,11 @@ void setup() {
   print("Confirming Center X:", centerX);
   println("/t Confirming Center Y:", centerY); //Illstrates a character escape
   //
-  pauseX = centerX - buttonReferentMeasure*1/2;
-  pauseY = centerY - buttonReferentMeasure*1/2;
+  pauseX1 = centerX - buttonReferentMeasure*1/2;
+  pauseY1 = centerY - buttonReferentMeasure*1/2;
+  pauseWidth = buttonReferentMeasure * 1/3;
+  pauseX2 = centerX + buttonReferentMeasure*1/2;
+  pauseY2 = pauseY1; 
   //
 } //End setup
 //
@@ -42,7 +46,7 @@ void draw() {
   //rect( stopX, stopY, buttonSide, buttonSide ); //Square shape
   //
   //Pause Button
-  //rect( pauseX, pauseY, buttonSide, buttonSide ); //Layout
+  //rect( pauseX1, pauseY1, buttonSide, buttonSide ); //Layout
   //rect( pauseX1, pauseY1, pauseWidth, buttonSide );
   //rect( pauseX2, pauseY2, pauseWidth, buttonSide );
   //
