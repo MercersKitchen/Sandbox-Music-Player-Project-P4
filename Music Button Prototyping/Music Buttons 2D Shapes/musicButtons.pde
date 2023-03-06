@@ -6,8 +6,11 @@
 float buttonReferentMeasure;
 float buttonSide, spaceWidth, spaceHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth;
-float playX, playY, stopX, stopY, muteX, muteY, loopIX, loopIY;
-float ffX, ffY, rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
+float playX1, playY1, playX2, playY2, playX3, playY3;
+float stopX, stopY, muteX, muteY, loopIX, loopIY;
+float ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A;
+float ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B;
+float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
 void setup() {
@@ -31,8 +34,13 @@ void setup() {
   pauseWidth = buttonReferentMeasure * 1/3;
   pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
-  playX = pauseX1;
-  playY = pauseY1;
+  playX1 = pauseX1;
+  playY1 = pauseY1;
+  playX3 = playX1;
+  playY3 = pauseY1 + buttonReferentMeasure;
+  //Note: need playY3 before playY2
+  playX2 = playX1 + buttonReferentMeasure;
+  playY2 = playY1 + (playY3-playY1)*1/2;
   //
   buttonPositionRow = 1;
   muteX = pauseX1;
@@ -42,8 +50,19 @@ void setup() {
   loopIY = pauseY1 + ( buttonPositionRow * buttonReferentMeasure );
   //
   buttonPositionColumn = 1;
-  ffX = pauseX1 + ( buttonPositionColumn*buttonReferentMeasure );
-  ffY = pauseY1;
+  ffX1A = pauseX1 + ( buttonPositionColumn*buttonReferentMeasure );
+  ffY1A = pauseY1;
+  //Note: need points 1 & 3 to calculate 2
+  ffX3A = ffX1A;
+  ffY3A = ffY1A + buttonReferentMeasure;
+  ffX2A = ffX1A + buttonReferentMeasure*1/2;
+  ffY2A = ffY1A + (ffY3A-ffY1A)*1/2;
+  ffX1B = ffX2A;
+  ffY1B = ffY1A;
+  ffX2B = ffX2A + buttonReferentMeasure*1/2;
+  ffY2B = ffY2A;
+  ffX3B = ffX2A;
+  ffY3B = ffY3A;
   //
   rrX = pauseX1 - ( buttonPositionColumn*buttonReferentMeasure );
   rrY = pauseY1;
@@ -89,22 +108,22 @@ void draw() {
   //rect( stopX, stopY, buttonSide, buttonSide ); //Square shape
   //
   //Pause Button
-  rect( pauseX1, pauseY1, buttonSide, buttonSide ); //Layout
-  //rect( pauseX1, pauseY1, pauseWidth, buttonSide );
-  //rect( pauseX2, pauseY2, pauseWidth, buttonSide );
+  //rect( pauseX1, pauseY1, buttonSide, buttonSide ); //Layout
+  rect( pauseX1, pauseY1, pauseWidth, buttonSide );
+  rect( pauseX2, pauseY2, pauseWidth, buttonSide );
   //
   //Play Button
   //rect( playX, playY, buttonSide, buttonSide ); //Layout
-  //triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
+  triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   //
   //MUTE Button
   rect( muteX, muteY, buttonSide, buttonSide ); //Layout
   //Students to develop
   //
   //Fast Forward in the Song
-  rect( ffX, ffY, buttonSide, buttonSide ); //Layout
-  //triangle( ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A );
-  //triangle( ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B );
+  //rect( ffX, ffY, buttonSide, buttonSide ); //Layout
+  triangle( ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A );
+  triangle( ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B );
   //
   //Reverse in the Song
   rect( rrX, rrY, buttonSide, buttonSide ); //Layout
