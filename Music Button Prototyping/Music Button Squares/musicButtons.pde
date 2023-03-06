@@ -29,7 +29,7 @@ void setup() {
   pauseX1 = centerX - buttonReferentMeasure*1/2;
   pauseY1 = centerY - buttonReferentMeasure*1/2;
   pauseWidth = buttonReferentMeasure * 1/3;
-  pauseX2 = centerX + pauseWidth*1/2;
+  pauseX2 = pauseX1 + 2*pauseWidth;
   pauseY2 = pauseY1;
   playX = pauseX1;
   playY = pauseY1;
@@ -94,7 +94,7 @@ void draw() {
   //rect( pauseX2, pauseY2, pauseWidth, buttonSide );
   //
   //Play Button
-  //rect( playX, playY, buttonSide, buttonSide ); //Layout
+  rect( playX, playY, buttonSide, buttonSide ); //Layout
   //triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   //
   //MUTE Button
