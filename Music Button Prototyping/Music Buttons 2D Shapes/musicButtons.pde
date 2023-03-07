@@ -10,6 +10,8 @@ float playX1, playY1, playX2, playY2, playX3, playY3;
 float stopX, stopY, muteX, muteY, loopIX, loopIY;
 float ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A;
 float ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B;
+float rrX1A, rrY1A, rrX2A, rrY2A, rrX3A, rrY3A;
+float rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
@@ -66,6 +68,18 @@ void setup() {
   //
   rrX = pauseX1 - ( buttonPositionColumn*buttonReferentMeasure );
   rrY = pauseY1;
+  rrX1A = pauseX1;
+  rrY1A = pauseY1;
+  rrX3A = rrX1A;
+  rrY3A = rrY1A + buttonReferentMeasure;
+  rrX2A = rrX1A - ( buttonPositionColumn*buttonReferentMeasure )*1/2;
+  rrY2A = rrY1A + ( rrY3A - rrY1A )*1/2;
+  rrX1B = rrX2A;
+  rrY1B = rrY1A;
+  rrX2B = rrX2A - ( buttonPositionColumn*buttonReferentMeasure )*1/2;
+  rrY2B = rrY2A;
+  rrX3B = rrX2A;
+  rrY3B = rrY3A;
   //
   buttonPositionColumn = 2; //can increment with +=1
   nextX = pauseX1 + ( buttonPositionColumn*buttonReferentMeasure );
@@ -126,9 +140,9 @@ void draw() {
   triangle( ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B );
   //
   //Reverse in the Song
-  rect( rrX, rrY, buttonSide, buttonSide ); //Layout
-  //triangle( rrX1A, rrY1A, rrX2A, rrY2A, rrX3A, rrY3A );
-  //triangle( rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B );
+  //rect( rrX, rrY, buttonSide, buttonSide ); //Layout
+  triangle( rrX1A, rrY1A, rrX2A, rrY2A, rrX3A, rrY3A );
+  triangle( rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B );
   //
   //Next Button, skip file
   rect( nextX, nextY, buttonSide, buttonSide ); //Layout
