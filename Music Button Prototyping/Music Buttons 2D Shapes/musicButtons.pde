@@ -1,5 +1,5 @@
-/* Note: this program does not deal with spaces very well
- How would spaces be dealt with?
+/* Note: this program does not deal with spaces very well. How would spaces be dealt with?
+ Note: this program draws a few buttons, then expects students to draw the rest
  */
 //
 //Global Variables
@@ -12,6 +12,8 @@ float ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A;
 float ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B;
 float rrX1A, rrY1A, rrX2A, rrY2A, rrX3A, rrY3A;
 float rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B;
+float nextX1, nextY1, nextX2, nextY2, nextX3, nextY3, nextXR2, nextYR2, nextWidth;
+float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
@@ -84,9 +86,27 @@ void setup() {
   buttonPositionColumn = 2; //can increment with +=1
   nextX = pauseX1 + ( buttonPositionColumn*buttonReferentMeasure );
   nextY = pauseY1;
+  nextX1 = nextX;
+  nextY1 = nextY;
+  nextX3 = nextX1;
+  nextY3 = nextY1 + buttonReferentMeasure;
+  nextX2 = nextX1 + buttonReferentMeasure*2/3;
+  nextY2 = nextY1 + (nextY3 - nextY1)*1/2;
+  nextXR2 = nextX + buttonReferentMeasure*2/3;
+  nextYR2 = nextY;
+  nextWidth = buttonReferentMeasure*1/3;
   //
   prevX = pauseX1 - ( buttonPositionColumn*buttonReferentMeasure );
   prevY = pauseY1;
+  prevX1 = rrX2B; //backward from previous button
+  prevY1 = prevY;
+  prevX3 = prevX1;
+  prevY3 = prevY1 + buttonReferentMeasure;
+  prevX2 = prevX1 - buttonReferentMeasure*2/3;
+  prevY2 = prevY1 + ( prevY3 - prevY1 )*1/2;
+  prevXR = prevX2 - buttonReferentMeasure*1/3;
+  prevYR = prevY1;
+  prevWidth = buttonReferentMeasure*1/3;
   //
   buttonPositionColumn = 3;
   loop1X = pauseX1 + ( buttonPositionColumn*buttonReferentMeasure );
@@ -145,14 +165,14 @@ void draw() {
   triangle( rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B );
   //
   //Next Button, skip file
-  rect( nextX, nextY, buttonSide, buttonSide ); //Layout
-  //triangle( nextX1, nextY1, nextX2, nextY2, nextX3, nextY3 );
-  //rect( nextX, nextY, nextWidth, buttonSide );
+  //rect( nextX, nextY, buttonSide, buttonSide ); //Layout
+  triangle( nextX1, nextY1, nextX2, nextY2, nextX3, nextY3 );
+  rect( nextXR2, nextYR2, nextWidth, buttonSide );
   //
   //Previous Button
-  rect( prevX, prevY, buttonSide, buttonSide ); //Layout
-  //triangle( prevX1, prevY1, prevX2, prevY2, prevX3, prevY3 );
-  //rect( prevX, prevY, prevWidth, buttonSide );
+  //rect( prevX, prevY, buttonSide, buttonSide ); //Layout
+  triangle( prevX1, prevY1, prevX2, prevY2, prevX3, prevY3 );
+  rect( prevXR, prevYR, prevWidth, buttonSide );
   //
   //Loop the Song Once
   //Students to Develop
