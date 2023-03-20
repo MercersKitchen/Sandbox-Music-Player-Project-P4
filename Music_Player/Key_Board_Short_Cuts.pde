@@ -46,4 +46,25 @@ void quitButtonCode() {
   exit();
 }//End quitButtonCode
 //
+void autoPlay() {}//End AutoPlay
+//
+void stopSong() {}//End Stp Song
+//
+void fastForward() {}//End Fast Forward
+//
+void fastRewind() {}//End Fast Rewind
+//
+void nextSong() {}//End Next Song
+//
+void previousSong() {}//End Previous Song
+//
+void loopSong() {}//End Loop Song
+//
+void loopPlaylist() {}//End Loop the Playlist
+//
+void shufflePlaylist() {}//End Shuffle the Playlist()
+//
+void loopAndShuffle() {}//End Loop And Shuffle
+//
+
 //End Key Board Short Cuts Sub Program
