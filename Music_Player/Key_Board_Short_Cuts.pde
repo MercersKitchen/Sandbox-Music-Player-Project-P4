@@ -17,7 +17,8 @@ void musicShortCuts() {
   if ( key == '7' ) song6.loop(0);
   if ( key == '8' ) song7.loop(0);
   //
-  if ( key == 'P' || key=='p' ) autoPlay();
+  if ( key == 'U' || key=='u' ) autoPlay();
+  if ( key == 'P' || key=='p' ) playPause();
   if ( key == 'M' || key=='m' ) mute();
   if ( key == 'S' || key=='s' ) stopSong();
   if ( key == 'F' || key=='f' ) fastForward();
@@ -47,27 +48,59 @@ void quitButtonCode() {
   exit();
 }//End quitButtonCode
 //
-void autoPlay() {}//End AutoPlay
+void autoPlay() {
+}//End AutoPlay
 //
-void mute() {}//End Mute
+void playPause() {
+  //Ask computer if the song is playing
+}//End AutoPlay
 //
-void stopSong() {}//End Stp Song
+void mute()
+{
+  //MUTE, not PAUSE, only affects the speakers
+  //ERROR: this MUTE Button only works when the song is playing
+  //ERROR: user will spam mute if song is at end of file
+  if ( song0.isMuted() ) {
+    song0.unmute();
+  } else if ( song0.isMuted() && song0.position() >= song0.length()*4/5 ) {
+    song0.rewind(); //one solution
+    song0.unmute();
+    //
+    /* Other solutions
+     - unmute the next song
+     - show notification speakers are muted and song will not play
+     */
+  } else {
+    song0.mute(); //simple solution, contains two ERRORS, see above
+  }
+}//End Mute
 //
-void fastForward() {}//End Fast Forward
+void stopSong() {
+}//End Stp Song
 //
-void fastRewind() {}//End Fast Rewind
+void fastForward() {
+}//End Fast Forward
 //
-void nextSong() {}//End Next Song
+void fastRewind() {
+}//End Fast Rewind
 //
-void previousSong() {}//End Previous Song
+void nextSong() {
+}//End Next Song
 //
-void loopSong() {}//End Loop Song
+void previousSong() {
+}//End Previous Song
 //
-void loopPlaylist() {}//End Loop the Playlist
+void loopSong() {
+}//End Loop Song
 //
-void shufflePlaylist() {}//End Shuffle the Playlist()
+void loopPlaylist() {
+}//End Loop the Playlist
 //
-void loopAndShuffle() {}//End Loop And Shuffle
+void shufflePlaylist() {
+}//End Shuffle the Playlist()
+//
+void loopAndShuffle() {
+}//End Loop And Shuffle
 //
 
 //End Key Board Short Cuts Sub Program
