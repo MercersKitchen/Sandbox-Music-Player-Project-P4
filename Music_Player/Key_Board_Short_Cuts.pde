@@ -18,6 +18,7 @@ void musicShortCuts() {
   if ( key == '8' ) song7.loop(0);
   //
   if ( key == 'P' || key=='p' ) autoPlay();
+  if ( key == 'M' || key=='m' ) mute();
   if ( key == 'S' || key=='s' ) stopSong();
   if ( key == 'F' || key=='f' ) fastForward();
   if ( key == 'R' || key=='r' ) fastRewind();
@@ -47,6 +48,8 @@ void quitButtonCode() {
 }//End quitButtonCode
 //
 void autoPlay() {}//End AutoPlay
+//
+void mute() {}//End Mute
 //
 void stopSong() {}//End Stp Song
 //
