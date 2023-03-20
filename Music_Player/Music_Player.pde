@@ -40,10 +40,9 @@ void keyPressed() {
   soundEffect0.play();
   soundEffect0.rewind();
   delay(4000); //milliseconds read from draw() println() debugging
-  //println( "KeyPrekssed:", soundEffect0.length() );
+  //println( "KeyPressed:", soundEffect0.length() );
   //
   keyPressedShortCuts();
-  quitButtons();
   //
 } //End keyPressed
 //
