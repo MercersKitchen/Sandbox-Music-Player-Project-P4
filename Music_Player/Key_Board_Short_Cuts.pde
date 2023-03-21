@@ -107,9 +107,11 @@ void stopSong()
 }//End Stp Song
 //
 void fastForward() {
+  if () ;
 }//End Fast Forward
 //
 void fastRewind() {
+  if () ;
 }//End Fast Rewind
 //
 void nextSong() {
