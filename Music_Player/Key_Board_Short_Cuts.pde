@@ -17,10 +17,11 @@ void musicShortCuts() {
   if ( key == '7' ) song6.loop(0);
   if ( key == '8' ) song7.loop(0);
   //
+  //Students to make these smarter
   if ( key == 'U' || key=='u' ) autoPlay();
   if ( key == 'P' || key=='p' ) playPause();
-  if ( key == 'M' || key=='m' ) mute();
-  if ( key == 'S' || key=='s' ) stopSong();
+  if ( key == 'M' || key=='m' ) mute(); //teacher started
+  if ( key == 'S' || key=='s' ) stopSong(); //teacher started
   if ( key == 'F' || key=='f' ) fastForward();
   if ( key == 'R' || key=='r' ) fastRewind();
   if ( key == 'N' || key=='n' ) nextSong();
@@ -58,6 +59,7 @@ void playPause() {
 void mute()
 {
   //MUTE, not PAUSE, only affects the speakers
+  //Based on a question: is the song muted
   //ERROR: this MUTE Button only works when the song is playing
   //ERROR: user will spam mute if song is at end of file
   if ( song0.isMuted() ) {
@@ -75,7 +77,11 @@ void mute()
   }
 }//End Mute
 //
-void stopSong() {
+void stopSong()
+{
+  //Based on a question: is the song playing
+  //Hint: would this fix the ERROR of the MUTE Button
+  if () {} else {}
 }//End Stp Song
 //
 void fastForward() {
