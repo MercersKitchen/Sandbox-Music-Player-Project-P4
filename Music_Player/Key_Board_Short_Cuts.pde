@@ -8,6 +8,7 @@ void keyPressedShortCuts() {
 void musicShortCuts() {
   //Key Board Short Cuts for Music, use numbers
   //Hint: notice human numbering vs. computer numbering9
+  //Note: if(key=='1')song0.loop(0); will change to array & index introduction
   if ( key == '1' ) song0.loop(0); //.rewind() is included in .loop()
   if ( key == '2' ) song1.loop(0);
   if ( key == '3' ) song2.loop(0);
@@ -18,15 +19,17 @@ void musicShortCuts() {
   if ( key == '8' ) song7.loop(0);
   //
   //Students to make these smarter
-  if ( key == 'U' || key=='u' ) autoPlay();
-  if ( key == 'P' || key=='p' ) playPause();
+  //Separated into single songs and multiple songs
+  //
+  if ( key == 'U' || key=='u' ) autoPlay(); //psuedo code only
+  if ( key == 'P' || key=='p' ) playPause(); //teacher started
   if ( key == 'M' || key=='m' ) mute(); //teacher started
   if ( key == 'S' || key=='s' ) stopSong(); //teacher started
-  if ( key == 'F' || key=='f' ) fastForward();
-  if ( key == 'R' || key=='r' ) fastRewind();
-  if ( key == 'N' || key=='n' ) nextSong();
-  if ( key == 'B' || key=='b' ) previousSong();
-  if ( key == 'L' || key=='l' ) loopSong();
+  if ( key == 'F' || key=='f' ) fastForward(); //teacher started
+  if ( key == 'R' || key=='r' ) fastRewind(); //teacher started
+  if ( key == 'N' || key=='n' ) nextSong(); //psuedo code only
+  if ( key == 'B' || key=='b' ) previousSong(); //psuedo code only
+  if ( key == 'L' || key=='l' ) loopSong(); //loops current song infinitely
   if ( key == 'O' || key=='o' ) loopPlaylist(); //entire playlist
   if ( key == 'W' || key=='w' ) shufflePlaylist(); //shuffle
   if ( key == 'E' || key=='e' ) loopAndShuffle(); //Loop and Shuffle
@@ -63,14 +66,14 @@ void playPause()
   if ( song0.isPlaying() ) {
     song0.pause();
   } else if ( song0.position() >= song0.length()*4/5 ) { //80% of the song
-    .rewind();
-    .play();
+    song0.rewind();
+    song0.play();
     //Remember, Auto Play is better b/c it plays the next song
   } else {
     //autoPlay(), is better here
     song0.play(); //Interim solution
   }
-}//End AutoPlay
+}//End Play Pause
 //
 void mute()
 {
@@ -104,7 +107,7 @@ void stopSong()
   } else {
     song0.rewind();
   }
-}//End Stp Song
+}//End Stop Song
 //
 void fastForward() {
   //Asks comptuer if the song is playing

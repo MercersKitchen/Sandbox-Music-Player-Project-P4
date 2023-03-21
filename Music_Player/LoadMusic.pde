@@ -15,6 +15,7 @@ void loadMusic() {
   String simplestFileName = "The_Simplest.mp3";
   String stingFileName = "The_Simplest_Sting.mp3";
   String closeDoorFileName = "Wood_Door_Open_and_Close_Series.mp3";
+  //Note: will change to Array and Index
   song0 = minim.loadFile( musicPathway + grooveFileName );
   song1 = minim.loadFile( musicPathway + eurekaFileName );
   song2 = minim.loadFile( musicPathway + competitionFileName );

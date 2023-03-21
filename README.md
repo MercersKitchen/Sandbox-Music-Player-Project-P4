@@ -31,6 +31,32 @@ Example To Do List
   - [] IF - ELSE
   - IF - ELSE IF - ELSE
   - [] ADVANCED: Next and Previous Songs require arrays, will be done later
+- [] Code "Single" Song Buttons
+  - [] Simple Play Buttons, require change to array and index (computer tracks alpha numeric variable naming)
+  - [] Play-Pause
+  - [] Stop
+  - [] Mute
+  - [] Fast Forward
+  - [] Fast Rewind
+  - [] Use following code ... which means these buttons are fancy ...
+    - .isPlaying()
+    - .isMuted()
+    - .pause()
+    - .rewind()
+    - .play(), but Auto Play is better (see below)
+    - . unmute()
+    - .mute()
+    - .skip(+/-milliSeconds)
+- [] Code "Multiple" Song Buttons
+  - [] Introduce Array and Index from alpha numeric numbering
+  - [] Auto Play Button (used instead of a play button)
+  - [] Next Button
+  - [] Previous Button
+- [] Advanced Buttons
+  - [] Loop Current Song Infinitely
+  - [] Loop Play List
+  - [] Shuffle Play List
+
 
 
 CONTINUE HERE
