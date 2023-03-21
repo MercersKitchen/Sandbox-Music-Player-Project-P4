@@ -55,7 +55,18 @@ void autoPlay() {
 void playPause()
 {
   //Ask computer if the song is playing
-  if () {} else if () {} else {}
+  //Note: remember to use Auto Play
+  //ERROR: song will not play if at the end
+  if ( song0.isPlaying() ) {
+    song0.pause();
+  } else if ( song0.position() >= song0.length()*4/5 ) { //80% of the song
+    .rewind();
+    .play();
+    //Remember, Auto Play is better b/c it plays the next song
+  } else {
+    //autoPlay(), is better here
+    song0.play(); //Interim solution
+  }
 }//End AutoPlay
 //
 void mute()
