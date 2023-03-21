@@ -81,7 +81,13 @@ void stopSong()
 {
   //Based on a question: is the song playing
   //Hint: would this fix the ERROR of the MUTE Button
-  if () {} else {}
+  //Note: STOP is actually afancy rewind
+  if ( song0.isPlaying() ) {
+    song0.pause();
+    song0.rewind();
+  } else {
+    song0.rewind();
+  }
 }//End Stp Song
 //
 void fastForward() {
