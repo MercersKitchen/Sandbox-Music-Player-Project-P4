@@ -107,11 +107,12 @@ void stopSong()
 }//End Stp Song
 //
 void fastForward() {
-  if () ;
+  //Asks comptuer if the song is playing
+  if ( song0.isPlaying() ) song0.skip(1000); //parameter in milliseconds
 }//End Fast Forward
 //
 void fastRewind() {
-  if () ;
+  if ( song0.isPlaying() ) song0.skip(-1000); //parameter in milliseconds
 }//End Fast Rewind
 //
 void nextSong() {
