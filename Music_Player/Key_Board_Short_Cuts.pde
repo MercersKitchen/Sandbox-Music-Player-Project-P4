@@ -50,6 +50,9 @@ void quitButtonCode() {
 }//End quitButtonCode
 //
 void autoPlay() {
+  //Note: plays one song, then the next automatically
+  //Asks the computer if a song is playing, continually
+  //When current song finishes, it rewinds current song and plays the next song
 }//End AutoPlay
 //
 void playPause()
