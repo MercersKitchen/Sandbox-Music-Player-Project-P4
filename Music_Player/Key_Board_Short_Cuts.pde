@@ -52,8 +52,10 @@ void quitButtonCode() {
 void autoPlay() {
 }//End AutoPlay
 //
-void playPause() {
+void playPause()
+{
   //Ask computer if the song is playing
+  if () {} else if () {} else {}
 }//End AutoPlay
 //
 void mute()
@@ -81,7 +83,7 @@ void stopSong()
 {
   //Based on a question: is the song playing
   //Hint: would this fix the ERROR of the MUTE Button
-  //Note: STOP is actually afancy rewind
+  //Note: STOP is actually afancy rewind, no ERRORS
   if ( song0.isPlaying() ) {
     song0.pause();
     song0.rewind();
