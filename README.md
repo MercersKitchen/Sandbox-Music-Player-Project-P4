@@ -21,16 +21,15 @@ Example To Do List
   - [x] advanced introductory: list of music files .mp3, as populated from meta data from .mp3 files (CAUTION: this is an impossible ask, can you explain why)
 - [x] creating keyboard short cuts to play sound effects and quit
 - [x] design of music buttons based on rect(), triangle(), and ellipse()
-  - [] design buttons in order, illustrate how stop designs rest: stop, pause, play, mute, skip forward in seconds, skip reverse in seconds, next song, previous song, three loops, and a shuffle (shapes in fast forward and next illustrate what actually happens)
-  - [] Using the referent of the side length of the STOP button, design all layout rect() of all the other buttons
-  - [] Design all buttons
+  - [x] design buttons in order, illustrate how stop designs rest: stop, pause, play, mute, skip forward in seconds, skip reverse in seconds, next song, previous song, three loops, and a shuffle (shapes in fast forward and next illustrate what actually happens)
+  - [x] Using the referent of the side length of the STOP button, design all layout rect() of all the other buttons
+  - [x] Design all buttons
 - [x] layout code groupings so keyPressed() does the same as mousePressed()
-- [] Pseudocode all buttons & demonstrate one way of coding
-  - [] Single Line IF
-  - [] Multiple Line IF
-  - [] IF - ELSE
+- [x] Pseudocode all buttons & demonstrate one way of coding
+  - [x] Single Line IF
+  - [x] Multiple Line IF
+  - [x] IF - ELSE
   - IF - ELSE IF - ELSE
-  - [] ADVANCED: Next and Previous Songs require arrays, will be done later
 - [x] Code "Single" Song Buttons
   - [x] Simple Play Buttons, require change to array and index (computer tracks alpha numeric variable naming)
   - [x] Play-Pause
@@ -55,7 +54,7 @@ Example To Do List
 - [] Advanced Buttons
   - [] Loop Current Song Infinitely
   - [] Loop Play List
-  - [] Shuffle Play List
+  - [] Shuffle Play List (hint: randomly choose song number, might need casting)
 
 
 
