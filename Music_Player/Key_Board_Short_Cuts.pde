@@ -134,6 +134,8 @@ void shufflePlaylist() {
 }//End Shuffle the Playlist()
 //
 void loopAndShuffle() {
+  //Student to finish
+  //Hint: random() and casting, see Global Variables' currentSong declaration
 }//End Loop And Shuffle
 //
 
