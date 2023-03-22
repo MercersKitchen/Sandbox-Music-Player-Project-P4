@@ -13,6 +13,7 @@ AudioPlayer[] songs = new AudioPlayer[numberOfSongs]; //Play List Data Structure
 // Pre-array: AudioPlayer soundEffect0, soundEffect1;
 int numberOfSoundEffects = 2;
 AudioPlayer[] soundEffects = new AudioPlayer[numberOfSoundEffects];
+int currentSong = int ( random( numberOfSongs-1 ) ); //Starts playlist from random song
 //
 int time = 7000;
 //
@@ -25,6 +26,7 @@ void setup() {
   //Illsutrate Garbage Collection of Local Variable
   //println("Music Pathway is", musicPathway); //local variable doesn't exit outside of void loadMusic() {}
   //
+  println("here", currentSong);
 } //End setup
 //
 void draw() {
@@ -41,10 +43,10 @@ void draw() {
 void keyPressed() {
   //
   //Play sound effect when pressing a key, including delay
-  soundEffect0.play();
-  soundEffect0.rewind();
+  soundEffects[0].play();
+  soundEffects[0].rewind();
   delay(4000); //milliseconds read from draw() println() debugging
-  //println( "KeyPressed:", soundEffect0.length() );
+  //println( "KeyPressed:", soundEffects[0].length() );
   //
   keyPressedShortCuts();
   //
