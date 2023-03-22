@@ -21,8 +21,9 @@ void musicShortCuts() {
   //Students to make these smarter
   //Separated into single songs and multiple songs
   //
-  if ( key == 'U' || key=='u' ) autoPlay(); //psuedo code only
   if ( key == 'P' || key=='p' ) playPause(); //teacher started
+  //Note: for this Auto Play to Work, song must be playing
+  if ( key == 'U' || key=='u' ) autoPlay(); //teacher started
   if ( key == 'M' || key=='m' ) mute(); //teacher started
   if ( key == 'S' || key=='s' ) stopSong(); //teacher started
   if ( key == 'F' || key=='f' ) fastForward(); //teacher started
@@ -52,11 +53,33 @@ void quitButtonCode() {
   exit();
 }//End quitButtonCode
 //
+/* Note: must define a difference between auto play and loop playlist
+ */
 void autoPlay() {
   //Note: plays one song, then the next automatically
   //Asks the computer if a song is playing, continually
   //When current song finishes, it rewinds current song and plays the next song
+  //
+  /*ERROR: autoplay never stops the song if it is enabled
+  - once the song stops, or by pressing STOP
+  - next song will start
+  - might even start the next song at the same time as the current song
+  */
+  if ( autoPlayON==false ) {
+    autoPlayON=true;
+  } else {
+    autoPlayON=false;
+    songs[currentSong].pause(); //enables play to continue when auto play is turned off
+    //songs[currentSong].rewind();
+  }
 }//End AutoPlay
+void autoPlayMusic() {
+  //ERROR: ArrayListOutOfBounds
+  if ( songs[currentSong].isPlaying()==false ) {
+    currentSong++;
+    songs[currentSong].play();
+  }
+}//End Auto Play Music
 //
 void playPause()
 {
@@ -119,9 +142,13 @@ void fastRewind() {
 }//End Fast Rewind
 //
 void nextSong() {
+  //ERROR: ArrayListOutOfBounds
+  currentSong++;
 }//End Next Song
 //
 void previousSong() {
+  //ERROR: ArrayListOutOfBounds
+  currentSong--;
 }//End Previous Song
 //
 void loopSong() {

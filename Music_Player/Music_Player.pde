@@ -17,16 +17,15 @@ int currentSong = int ( random( numberOfSongs-1 ) ); //Starts playlist from rand
 //
 int time = 7000;
 //
-Boolean activateWindow=false;
+Boolean activateWindow=false, autoPlayON=false;
 //
 void setup() {
   size(300, 300);
   loadMusic();
   //
-  //Illsutrate Garbage Collection of Local Variable
+  //Illustrate Garbage Collection of Local Variable
   //println("Music Pathway is", musicPathway); //local variable doesn't exit outside of void loadMusic() {}
   //
-  println("here", currentSong);
 } //End setup
 //
 void draw() {
@@ -37,6 +36,9 @@ void draw() {
   //println ("When does the sound stop? Indicates delay");
   // Debugging a sound to shorten a file play
   //println( soundEffect1.position(), soundEffect1.length() );
+  println(autoPlayON, songs[currentSong].isPlaying(), currentSong, songs[currentSong].position(), songs[currentSong].length());
+  //
+  if ( autoPlayON==true ) autoPlayMusic();
   //
 } //End draw
 //
