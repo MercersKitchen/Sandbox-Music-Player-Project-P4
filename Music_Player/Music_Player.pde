@@ -7,8 +7,12 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;
-AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7;
-AudioPlayer soundEffect0, soundEffect1;
+// Pre-array: AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7;
+int numberOfSongs = 8;
+AudioPlayer[] songs = new AudioPlayer[numberOfSongs]; //Play List Data Structure
+// Pre-array: AudioPlayer soundEffect0, soundEffect1;
+int numberOfSoundEffects = 2;
+AudioPlayer[] soundEffects = new AudioPlayer[numberOfSoundEffects];
 //
 int time = 7000;
 //
