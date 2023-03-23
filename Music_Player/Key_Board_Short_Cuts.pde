@@ -61,10 +61,10 @@ void autoPlay() {
   //When current song finishes, it rewinds current song and plays the next song
   //
   /*ERROR: autoplay never stops the song if it is enabled
-  - once the song stops, or by pressing STOP
-  - next song will start
-  - might even start the next song at the same time as the current song
-  */
+   - once the song stops, or by pressing STOP
+   - next song will start
+   - might even start the next song at the same time as the current song
+   */
   if ( autoPlayON==false ) {
     autoPlayON=true;
   } else {
@@ -143,7 +143,18 @@ void fastRewind() {
 //
 void nextSong() {
   //ERROR: ArrayListOutOfBounds
-  currentSong++;
+  //ERROR: currentSong++; plays two songs or more at once
+  if ( songs[currentSong].isPlaying() ) {
+    //Students to finish
+    //Current Song: .pause(), .rewind()
+    //Next Song: currentSong++
+    //Now: DELAY-1-Second, .play()
+  } else if (currentSong >= songs.length-1 ) {
+    currentSong = 0;
+  } else {
+    songs[currentSong].rewind();
+    currentSong++;
+  }
 }//End Next Song
 //
 void previousSong() {
