@@ -1,8 +1,8 @@
 //Global Variables
 float textRectX, textRectY, textRectWidth, textRectHeight;
 PFont font;
-color purpleInk=#2C08FF; //Not nice for Night Mode, Blue Content
-String string = "I need off the learning bus! Spring Break is not over."
+color purpleInk=#2C08FF, resetWhiteInk=#FFFFFF; //Not nice for Night Mode, Blue Content
+String string = "I need off the learning bus! Spring Break is not over.";
 //
 void setup() {
   size(700, 500); //fullScreen(); //displayWidth & displayHeight
@@ -32,6 +32,8 @@ void setup() {
   //
   //Printing Text on the CANVAS
   text( string, textRectX, textRectY, textRectWidth, textRectHeight );
+  //
+  fill(resetWhiteInk);
   //
 }//End Set Up
 //
