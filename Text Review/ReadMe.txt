@@ -2,11 +2,11 @@
 
 Blank file to review text
 
-Find the rectagle to put the text in, then do a font calcualtor to automatically put it in
+Review Flat Text as lines of code in setup or draw
 
+Review how to group text into a void, same TAB but below
+- Then move it to a new TAB
 
-Review Flat Text
-
-Review how to group text
+Review sections of code to divide it into groups
 
 Review how to create a calcualtor
