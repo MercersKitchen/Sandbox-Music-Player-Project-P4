@@ -1,6 +1,8 @@
 //Global Variables
 float textRectX, textRectY, textRectWidth, textRectHeight;
 PFont font;
+color purpleInk=#2C08FF; //Not nice for Night Mode, Blue Content
+String string = "I need off the learning bus! Spring Break is not over."
 //
 void setup() {
   size(700, 500); //fullScreen(); //displayWidth & displayHeight
@@ -25,6 +27,11 @@ void setup() {
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Horiztonal Values (X): [LEFT | CENTER | RIGHT]
   //Vertical Values (Y): [TOP | CENTER | BOTTOM | BASELINE]
+  int textSize = 50; //Change the number until it fits, largest font size
+  textFont(font, textSize); 
+  //
+  //Printing Text on the CANVAS
+  text( string, textRectX, textRectY, textRectWidth, textRectHeight );
   //
 }//End Set Up
 //
