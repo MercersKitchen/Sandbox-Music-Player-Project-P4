@@ -7,7 +7,7 @@ String string = "I need off the learning bus! Spring Break is not over.";
 void setup() {
   size(700, 500); //fullScreen(); //displayWidth & displayHeight
   //
-  rect( textRectX, textRectY, textRectWidth, textRectHeight );
+  
   /*
   println("Start of Console");
   String[] fontList = PFont.list(); //To list all fonts available on system
