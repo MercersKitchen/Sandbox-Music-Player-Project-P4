@@ -8,7 +8,7 @@ String string1 = "I need off the learning bus! Spring Break is not over.";
 String string2 = "Bottom of the Page.";
 String string3 = "Middle.";
 //
-void allText() {
+void allText() { //VOIDs that go into MAIN PROGRAM
   textDraw1();
   textDraw2();
   textDraw3();
@@ -24,9 +24,10 @@ void textSetup() { //Executed Once
   textRectY2 = height*8/10;
   textRectY3 = height*5/10;
   //
+  //For visualizing rect(), variables are important
   //rect( textRectX1, textRectY1, textRectWidth1, textRectHeight1 );
-  rect( textRectX2, textRectY2, textRectWidth2, textRectHeight2 );
-  rect( textRectX3, textRectY3, textRectWidth3, textRectHeight3 );
+  //rect( textRectX2, textRectY2, textRectWidth2, textRectHeight2 );
+  //rect( textRectX3, textRectY3, textRectWidth3, textRectHeight3 );
   /*
   println("Start of Console");
    String[] fontList = PFont.list(); //To list all fonts available on system
@@ -38,18 +39,19 @@ void textSetup() { //Executed Once
   //
 }//End Text Setup()
 //
-void preTextDraw() {
+void preTextDraw() { //EXECUTED Code applied to all textDraw's
   fill(purpleInk); //Ink, hexidecimal copied from Color Selector
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Horiztonal Values (X): [LEFT | CENTER | RIGHT]
   //Vertical Values (Y): [TOP | CENTER | BOTTOM | BASELINE]
   textFont(font, height); //Change the number until it fits, largest font size
+  textSize( 42 ); //Change the number until it fits, largest font size
 }//End Pre Text Draw
 //
 void textDraw1() {
-  preTextDraw();
+  preTextDraw(); //Like COPY & PASTE, will not change
   //
-  //Paste here is text size will change depending on Strng
+  //Text size will change depending on String
   textSize( 18 ); //Change the number until it fits, largest font size
   //
   //Printing Text on the CANVAS
@@ -59,25 +61,21 @@ void textDraw1() {
 }//End Text Draw 1
 //
 void textDraw2() {
-  preTextDraw();
-  //Paste here is text size will change depending on Strng
-  textSize( 18 ); //Change the number until it fits, largest font size
-  //
-  //Printing Text on the CANVAS
+  preTextDraw(); //Like COPY & PASTE, will not change
+  //Change textAlign()
+  textAlign (CENTER, TOP); //Align X&Y, see Processing.org / Reference
+  //Change textSize()
+  textSize( 42 ); //Change the number until it fits, largest font size
   text( string2, textRectX2, textRectY2, textRectWidth2, textRectHeight2 );
   fill(resetWhiteInk);
-  //
 }//End Text Draw 2
 //
 void textDraw3() {
-  preTextDraw();
-  //Paste here is text size will change depending on Strng
-  textSize( 18 ); //Change the number until it fits, largest font size
-  //
-  //Printing Text on the CANVAS
+  preTextDraw(); //Like COPY & PASTE, will not change
+  //Change textSize()
+  textSize( 42 ); //Change the number until it fits, largest font size
   text( string3, textRectX3, textRectY3, textRectWidth3, textRectHeight3 );
   fill(resetWhiteInk);
-  //
 }//End Text Draw 3
 //
 //End Text Subprogram

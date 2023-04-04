@@ -13,6 +13,7 @@ void setup() {
   textRectWidth = width*3/5;
   textRectHeight = height*1/10;
   //
+  //For visualizing rect(), variables are important
   rect( textRectX, textRectY, textRectWidth, textRectHeight );
   /*
   println("Start of Console");
