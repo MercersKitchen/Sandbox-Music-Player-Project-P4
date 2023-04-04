@@ -7,12 +7,6 @@ String string = "I need off the learning bus! Spring Break is not over.";
 void setup() {
   size(700, 500); //fullScreen(); //displayWidth & displayHeight
   //
-  //Population, from display
-  textRectX = width*1/5;
-  textRectY = height*1/10;
-  textRectWidth = width*3/5;
-  textRectHeight = height*1/10;
-  //
   rect( textRectX, textRectY, textRectWidth, textRectHeight );
   /*
   println("Start of Console");
