@@ -26,6 +26,18 @@ void textSetup() {
   //
 }//End Text Setup()
 //
-void textDraw() {}//End Text Draw
+void textDraw1() {
+  fill(purpleInk); //Ink, hexidecimal copied from Color Selector
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Horiztonal Values (X): [LEFT | CENTER | RIGHT]
+  //Vertical Values (Y): [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(font, height); //Change the number until it fits, largest font size
+  textSize( 18 ); //Change the number until it fits, largest font size
+  //
+}//End Text Draw 1
+//
+void textDraw2() {}//End Text Draw 2
+//
+void textDraw3() {}//End Text Draw 3
 //
 //End Text Subprogram
