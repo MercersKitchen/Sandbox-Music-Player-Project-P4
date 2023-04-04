@@ -2,8 +2,16 @@
 float textRectX1, textRectY1, textRectWidth1, textRectHeight1;
 float textRectX2, textRectY2, textRectWidth2, textRectHeight2;
 float textRectX3, textRectY3, textRectWidth3, textRectHeight3;
+PFont font;
+color purpleInk=#2C08FF, resetWhiteInk=#FFFFFF; //Not nice for Night Mode, Blue Content
+String string1 = "I need off the learning bus! Spring Break is not over.";
+String string2 = "Bottom of the Page.";
+String string3 = "Middle.";
 //
 void allText() {
+  textDraw1();
+  textDraw2();
+  textDraw3();
 }//End All Text
 //
 void textSetup() { //Executed Once
@@ -42,7 +50,7 @@ void textDraw1() {
   textSize( 18 ); //Change the number until it fits, largest font size
   //
   //Printing Text on the CANVAS
-  text( string, textRectX1, textRectY1, textRectWidth1, textRectHeight1 );
+  text( string1, textRectX1, textRectY1, textRectWidth1, textRectHeight1 );
   fill(resetWhiteInk);
   //
 }//End Text Draw 1
