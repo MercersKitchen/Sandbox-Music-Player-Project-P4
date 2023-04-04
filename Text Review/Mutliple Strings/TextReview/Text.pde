@@ -16,10 +16,13 @@ void allText() {
 //
 void textSetup() { //Executed Once
   //Population, from display
-  textRectX1 = width*1/5;
+  //Must have CASE STUDY
+  textRectX1 = textRectX2 = textRectX3 = width*1/5;
+  textRectWidth1 = textRectWidth2= textRectWidth3= width*3/5;
+  textRectHeight1 = textRectHeight2 = textRectHeight3 = height*1/10;
   textRectY1 = height*1/10;
-  textRectWidth1 = width*3/5;
-  textRectHeight1 = height*1/10;
+  textRectY2 = height*8/10;
+  textRectY3 = height*5/10;
   //
   //rect( textRectX1, textRectY1, textRectWidth1, textRectHeight1 );
   rect( textRectX2, textRectY2, textRectWidth2, textRectHeight2 );

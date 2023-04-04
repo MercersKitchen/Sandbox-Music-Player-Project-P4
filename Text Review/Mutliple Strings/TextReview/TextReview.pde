@@ -4,10 +4,11 @@ void setup() {
   size(700, 500); //fullScreen(); //displayWidth & displayHeight
   //
   textSetup(); //Must be in setup()
+  //textDraw1(); //Can be anywhere
 }//End Set Up
 //
 void draw() {
-  textDraw1(); //Can be anywhere
+  allText();
 }//End Draw
 //
 void keyPressed() {
