@@ -7,15 +7,11 @@ String string = "I need off the learning bus! Spring Break is not over.";
 void setup() {
   size(700, 500); //fullScreen(); //displayWidth & displayHeight
   //
-  
-  //Printing Text on the CANVAS
-  text( string, textRectX, textRectY, textRectWidth, textRectHeight );
-  //
-  fill(resetWhiteInk);
-  //
+  textSetup(); //Must be in setup()
 }//End Set Up
 //
 void draw() {
+  textDraw1(); //Can be anywhere
 }//End Draw
 //
 void keyPressed() {
