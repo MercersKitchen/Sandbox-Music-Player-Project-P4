@@ -73,7 +73,6 @@ void textDraw2() {
 void textDraw3() {
   preTextDraw(); //Like COPY & PASTE, will not change
   //Change textSize()
-  textSize( 42 ); //Change the number until it fits, largest font size
   text( string3, textRectX3, textRectY3, textRectWidth3, textRectHeight3 );
   fill(resetWhiteInk);
 }//End Text Draw 3

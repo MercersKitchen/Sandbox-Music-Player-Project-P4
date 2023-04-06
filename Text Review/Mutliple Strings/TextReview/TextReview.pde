@@ -1,3 +1,5 @@
+/* This program needs the updates from the single string and void text() {} program
+ */
 //Global Variables
 //
 void setup() {
