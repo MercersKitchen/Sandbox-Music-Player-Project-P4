@@ -32,27 +32,29 @@ void textSetup() { //Executed Once
   println("Start of Console");
    String[] fontList = PFont.list(); //To list all fonts available on system
    printArray(fontList); //For listing all possible fonts to choose, then createFont
+   //Note: FOR Loop to printing specfic parts of fontList
    */
   // Choose your font now
   font = createFont ("Harrington", 55); //Verify font exists
+  //Variable names could be font names making code reading like a book
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug
   //
 }//End Text Setup()
 //
-void preTextDraw() { //EXECUTED Code applied to all textDraw's
+void textformatting() { //EXECUTED Code applied to all textDraw's
   fill(purpleInk); //Ink, hexidecimal copied from Color Selector
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Horiztonal Values (X): [LEFT | CENTER | RIGHT]
   //Vertical Values (Y): [TOP | CENTER | BOTTOM | BASELINE]
   textFont(font, height); //Change the number until it fits, largest font size
-  textSize( 42 ); //Change the number until it fits, largest font size
+  textSize( 18 ); //Change the number until it fits, largest font size
 }//End Pre Text Draw
 //
 void textDraw1() {
-  preTextDraw(); //Like COPY & PASTE, will not change
+  textformatting(); //Like COPY & PASTE, will not change
   //
-  //Text size will change depending on String
-  textSize( 18 ); //Change the number until it fits, largest font size
+  //Overwriting text formatting
+  //NA
   //
   //Printing Text on the CANVAS
   text( string1, textRectX1, textRectY1, textRectWidth1, textRectHeight1 );
@@ -61,18 +63,19 @@ void textDraw1() {
 }//End Text Draw 1
 //
 void textDraw2() {
-  preTextDraw(); //Like COPY & PASTE, will not change
+  textformatting(); //Like COPY & PASTE, will not change
   //Change textAlign()
   textAlign (CENTER, TOP); //Align X&Y, see Processing.org / Reference
   //Change textSize()
-  textSize( 42 ); //Change the number until it fits, largest font size
+  textSize( 30 ); //Change the number until it fits, largest font size
   text( string2, textRectX2, textRectY2, textRectWidth2, textRectHeight2 );
   fill(resetWhiteInk);
 }//End Text Draw 2
 //
 void textDraw3() {
-  preTextDraw(); //Like COPY & PASTE, will not change
+  textformatting(); //Like COPY & PASTE, will not change
   //Change textSize()
+  textSize( 42 ); //Change the number until it fits, largest font size
   text( string3, textRectX3, textRectY3, textRectWidth3, textRectHeight3 );
   fill(resetWhiteInk);
 }//End Text Draw 3
