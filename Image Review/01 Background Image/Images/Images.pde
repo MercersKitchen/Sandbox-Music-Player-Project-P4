@@ -11,12 +11,13 @@ appHeight = height;
 //Population
 backgroundImageX = appWidth*0; 
 backgroundImageY = appHeight*0;
-backgroundImageWidth = appWidth;
-backgroundImageHeight = appHeight;
+backgroundImageWidth = appWidth-1;
+backgroundImageHeight = appHeight-1;
+pic = loadImage();
 //
 //Rectangle Layout and Image drawing to CANVAS
-rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
+//rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
 //
-//image(); 
+image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight); 
 //
 //End Main Program
