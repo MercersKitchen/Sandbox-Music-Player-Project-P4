@@ -2,6 +2,7 @@
 */
 //Global Variables
 int appWidth, appHeight;
+float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
 //
 size(500, 100); //Landscape
 appWidth = width;
