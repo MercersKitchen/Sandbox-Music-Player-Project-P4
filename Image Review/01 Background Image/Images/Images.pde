@@ -9,8 +9,8 @@ appWidth = width;
 appHeight = height;
 //
 //Population
-backgroundImageX = appWidth; 
-backgroundImageY = appHeight;
+backgroundImageX = appWidth*0; 
+backgroundImageY = appHeight*0;
 backgroundImageWidth = appWidth;
 backgroundImageHeight = appHeight;
 //
