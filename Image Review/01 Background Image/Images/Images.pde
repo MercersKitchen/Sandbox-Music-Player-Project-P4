@@ -5,7 +5,6 @@ int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
 PImage pic;
 String pathway, fileName;
-Boolean nightMode=true;
 //
 size(500, 100); //Landscape
 appWidth = width;
@@ -27,8 +26,6 @@ pic = loadImage( pathway + fileName );
 //Rectangle Layout and Image drawing to CANVAS
 //rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
 //
-if ( nightMode==false ) tint(255, 128); //Day mode, half white (128/255=1/2)
-if ( nightMode==true ) tint(64, 64, 40); //Night mode, much less BLUE
 image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight); 
 //
 //End Main Program
