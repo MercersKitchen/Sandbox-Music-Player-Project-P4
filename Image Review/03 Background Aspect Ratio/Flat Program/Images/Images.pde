@@ -29,10 +29,16 @@ int picWidth = 800; //Origonal Dimension, MINE is 800, not yours
 int picHeight = 600; //Origonal Dimension, MINE is 600, not yours
 //Larger Dimension Algorithm, ASPECT RATIO
 if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
-
+  largerDimension = picWidth;
+  smallerDimension = picHeight;
+  picWidthAdjusted = ;
+  picHeightAdjusted = ;
 } else { //FALSE if Portrait
   /* Students to finish
-   
+   largerDimension = ;
+   smallerDimension = ;
+   picWidthAdjusted = ;
+   picHeightAdjusted = ;
    */
 }
 //
@@ -44,6 +50,6 @@ if ( nightMode==true ) tint(64, 64, 40); //Night mode, much less BLUE
 //No ASPECT RATIO
 image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
 //ASPECT RATIO
-image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted);
+image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted );
 //
 //End Main Program
