@@ -34,7 +34,7 @@ float imageHeightRatio, imageWidthRatio;
 if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
   largerDimension = picWidth;
   smallerDimension = picHeight;
-  imageHeightRatio = smallerDimension / largerDimension;
+  imageHeightRatio = float (smallerDimension) / float (largerDimension); //Ratio is <1, fixed by CASTING
   picWidthAdjusted = backgroundImageWidth; //Compression into rect()
   picHeightAdjusted = picWidthAdjusted * imageHeightRatio; //Calculated Variable from compressed variable
 } else { //FALSE if Portrait
@@ -53,9 +53,10 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
 //
 if ( nightMode==false ) tint(255, 128); //Day mode, half white (128/255=1/2)
 if ( nightMode==true ) tint(64, 64, 40); //Night mode, much less BLUE
-//No ASPECT RATIO
-image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
-//ASPECT RATIO
+//No ASPECT RATIO Image
+//image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
+//ASPECT RATIO Image
+println( picWidthAdjusted, picHeightAdjusted ); //View Human Error on variables, zero values
 image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted );
 //
 //End Main Program
