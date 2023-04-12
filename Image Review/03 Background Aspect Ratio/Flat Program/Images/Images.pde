@@ -31,7 +31,7 @@ int picHeight = 600; //Origonal Dimension, MINE is 600, not yours
 if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
   largerDimension = picWidth;
   smallerDimension = picHeight;
-  picWidthAdjusted = ;
+  picWidthAdjusted = backgroundImageWidth; //Compression into rect()
   picHeightAdjusted = ;
 } else { //FALSE if Portrait
   /* Students to finish
