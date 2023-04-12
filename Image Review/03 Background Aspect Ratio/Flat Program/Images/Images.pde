@@ -6,7 +6,7 @@ float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageH
 PImage pic;
 String pathway, fileName;
 Boolean nightMode=false;
-float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
+float picWidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
 //
 size(500, 100); //Landscape
 appWidth = width;
