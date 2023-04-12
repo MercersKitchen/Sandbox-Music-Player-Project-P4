@@ -6,6 +6,7 @@ float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageH
 PImage pic;
 String pathway, fileName;
 Boolean nightMode=false;
+float picWidthAdjusted, picHeightAdjusted;
 //
 size(500, 100); //Landscape
 appWidth = width;
@@ -28,17 +29,22 @@ pic = loadImage( pathway + fileName );
 int picWidth = 800; //Origonal Dimension, MINE is 800, not yours
 int picHeight = 600; //Origonal Dimension, MINE is 600, not yours
 //Larger Dimension Algorithm, ASPECT RATIO
+int smallerDimension, largerDimension;
+float imageHeightRatio, imageWidthRatio;
 if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
   largerDimension = picWidth;
   smallerDimension = picHeight;
+  imageHeightRatio = smallerDimension / largerDimension;
   picWidthAdjusted = backgroundImageWidth; //Compression into rect()
-  picHeightAdjusted = ;
+  picHeightAdjusted = picWidthAdjusted * imageHeightRatio; //Calculated Variable from compressed variable
 } else { //FALSE if Portrait
   /* Students to finish
    largerDimension = ;
    smallerDimension = ;
+   imageWidthRatio = ;
    picWidthAdjusted = ;
    picHeightAdjusted = ;
+   
    */
 }
 //
