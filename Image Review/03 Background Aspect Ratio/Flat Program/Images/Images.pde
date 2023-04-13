@@ -7,6 +7,8 @@ PImage pic;
 String pathway, fileName;
 Boolean nightMode=false;
 float picX_Adjusted=0.0, picY_Adjusted=0.0, picWidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
+float whiteSpace=0.0;
+Boolean imageCenter=true, imageRigthBottom=false; //Dev-Level Image Justification
 //
 size(500, 100); //Landscape
 appWidth = width;
