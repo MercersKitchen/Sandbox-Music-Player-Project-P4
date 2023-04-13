@@ -6,7 +6,7 @@ float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageH
 PImage pic;
 String pathway, fileName;
 Boolean nightMode=false;
-float picX_Adjusted=0.0, picY_Adjustedpic=0.0, WidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
+float picX_Adjusted=0.0, picY_Adjusted=0.0, picWidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
 //
 size(500, 100); //Landscape
 appWidth = width;
@@ -37,8 +37,16 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
   imageHeightRatio = float (smallerDimension) / float (largerDimension); //Ratio is <1, fixed by CASTING
   picWidthAdjusted = backgroundImageWidth; //Compression into rect()
   picHeightAdjusted = picWidthAdjusted * imageHeightRatio; //Calculated Variable from compressed variable
-  picX_Adjusted = backgroundImageX; 
+  //if image fits, no changes needed
+  picX_Adjusted = backgroundImageX;
   picY_Adjusted = backgroundImageY;
+  if ( picHeightAdjusted > backgroundImageHeight ) { //ERROR Catch: adjusted height is beigger than rect()
+    picHeightAdjusted = backgroundImageHeight; //Uses automatic compression algorithm
+    picWidthAdjusted = picWidthAdjusted * imageHeightRatio; //New Calculated Value
+    whiteSpace = backgroundImageWidth - picWidthAdjusted;
+    if ( imageCenter==true ) picX_Adjusted = backgroundImageX + whiteSpace*1/2;
+    if ( imageRigthBottom==true ) picX_Adjusted = backgroundImageX + whiteSpace;
+  }
 } else { //FALSE if Portrait
   /* Students to finish
    largerDimension = ;
