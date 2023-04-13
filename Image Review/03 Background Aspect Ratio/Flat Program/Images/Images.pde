@@ -8,7 +8,7 @@ String pathway, fileName;
 Boolean nightMode=false;
 float picX_Adjusted=0.0, picY_Adjusted=0.0, picWidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
 float whiteSpace=0.0;
-Boolean imageCenter=true, imageRigthBottom=false; //Dev-level Image Justification
+Boolean imageCenter=false, imageRightBottom=true; //Dev-level Image Justification
 //
 size(500, 100); //Landscape
 appWidth = width;
@@ -39,15 +39,24 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
   imageHeightRatio = float (smallerDimension) / float (largerDimension); //Ratio is <1, fixed by CASTING
   picWidthAdjusted = backgroundImageWidth; //Compression into rect()
   picHeightAdjusted = picWidthAdjusted * imageHeightRatio; //Calculated Variable from compressed variable
-  //if image fits, no changes needed
+  //if imgage fits in rect: format or justify image
+  whiteSpace = backgroundImageHeight - picHeightAdjusted;
+  //if image left justified, then no change to X&Y Vars
   picX_Adjusted = backgroundImageX;
-  picY_Adjusted = backgroundImageY;
-  if ( picHeightAdjusted > backgroundImageHeight ) { //ERROR Catch: adjusted height is beigger than rect()
-    picHeightAdjusted = backgroundImageHeight; //Uses automatic compression algorithm
-    picWidthAdjusted = picWidthAdjusted * imageHeightRatio; //New Calculated Value
+  picY_Adjusted = backgroundImageY; 
+  if ( imageCenter==true ) picY_Adjusted = backgroundImageY + whiteSpace*1/2;
+  if ( imageRightBottom==true) picY_Adjusted = backgroundImageY + whiteSpace;
+  //
+  if ( picHeightAdjusted > backgroundImageHeight ) { //ERROR Catch: adusted height is bigger then rect()
+    picHeightAdjusted = backgroundImageHeight;
+    picWidthAdjusted = picWidthAdjusted * imageHeightRatio;
+    //if imgage fits in rect: format or justify image
     whiteSpace = backgroundImageWidth - picWidthAdjusted;
+    //if image left justified, then no change to X&Y Vars
+    picX_Adjusted = backgroundImageX;
+    picY_Adjusted = backgroundImageY;
     if ( imageCenter==true ) picX_Adjusted = backgroundImageX + whiteSpace*1/2;
-    if ( imageRigthBottom==true ) picX_Adjusted = backgroundImageX + whiteSpace;
+    if ( imageRightBottom==true) picX_Adjusted = backgroundImageX + whiteSpace;
   }
 } else { //FALSE if Portrait
   /* Students to finish
