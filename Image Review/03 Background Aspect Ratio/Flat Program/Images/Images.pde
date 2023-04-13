@@ -8,7 +8,7 @@ String pathway, fileName;
 Boolean nightMode=false;
 float picX_Adjusted=0.0, picY_Adjusted=0.0, picWidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
 float whiteSpace=0.0;
-Boolean imageCenter=false, imageRightBottom=true; //Dev-level Image Justification
+Boolean imageCenter=false, imageRightBottom=false; //Dev-level Image Justification
 //
 size(500, 100); //Landscape
 appWidth = width;
@@ -63,9 +63,12 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
    largerDimension = ;
    smallerDimension = ;
    imageWidthRatio = ;
+   picX_Adjusted = ;
+    picY_Adjusted = ;
    picWidthAdjusted = ;
    picHeightAdjusted = ;
-   
+   whiteSpace = ;
+   image justifications with single line IFs
    */
 }
 //
