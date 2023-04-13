@@ -6,7 +6,7 @@ float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageH
 PImage pic;
 String pathway, fileName;
 Boolean nightMode=false;
-float picWidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
+float picX_Adjusted=0.0, picY_Adjustedpic=0.0, WidthAdjusted=0.0, picHeightAdjusted=0.0; //IF requires previous value, not NULL
 //
 size(500, 100); //Landscape
 appWidth = width;
@@ -37,6 +37,8 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape or Square
   imageHeightRatio = float (smallerDimension) / float (largerDimension); //Ratio is <1, fixed by CASTING
   picWidthAdjusted = backgroundImageWidth; //Compression into rect()
   picHeightAdjusted = picWidthAdjusted * imageHeightRatio; //Calculated Variable from compressed variable
+  picX_Adjusted = backgroundImageX; 
+  picY_Adjusted = backgroundImageY;
 } else { //FALSE if Portrait
   /* Students to finish
    largerDimension = ;
@@ -57,6 +59,6 @@ if ( nightMode==true ) tint(64, 64, 40); //Night mode, much less BLUE
 //image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
 //ASPECT RATIO Image
 println( picWidthAdjusted, picHeightAdjusted ); //View Human Error on variables, zero values
-image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted );
+image( pic, picX_Adjusted, picY_Adjusted, picWidthAdjusted, picHeightAdjusted );
 //
 //End Main Program
