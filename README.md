@@ -1,6 +1,10 @@
 # Music Player Project P4
 Lesson Notes
 
+# Teacher Notes are complete
+
+---
+
 Example To Do List
 - [] List item
 - [x] checked item
